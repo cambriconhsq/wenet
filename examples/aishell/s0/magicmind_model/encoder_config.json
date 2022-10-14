@@ -1,0 +1,9 @@
+{
+    "archs":["mtp_372"],
+    "graph_shape_mutable": true,
+    "opt_config": {
+        "type64to32_conversion": true,
+        "auto_fusion_enable": true
+    }
+}
+
