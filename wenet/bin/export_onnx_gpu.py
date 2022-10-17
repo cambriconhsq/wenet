@@ -323,7 +323,7 @@ def export_offline_encoder(model, configs, args, logger, encoder_onnx_path):
     with torch.no_grad():
         o0, o1, o2, o3, o4 = encoder(speech, speech_lens)
 
-    providers = ["CUDAExecutionProvider"]
+    providers = ["CPUExecutionProvider"]
     ort_session = onnxruntime.InferenceSession(encoder_onnx_path,
                                                providers=providers)
     ort_inputs = {'speech': to_numpy(speech),
@@ -481,7 +481,7 @@ def export_rescoring_decoder(model, configs, args, logger, decoder_onnx_path):
                      hyps_lens_sos,
                      r_hyps_pad_sos_eos,
                      ctc_score)
-    providers = ["CUDAExecutionProvider"]
+    providers = ["CPUExecutionProvider"]
     ort_session = onnxruntime.InferenceSession(decoder_onnx_path,
                                                providers=providers)
 
