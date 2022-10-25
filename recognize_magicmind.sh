@@ -7,8 +7,8 @@ mm_dir=./example/aishell/s0/magicmind_model/
 
 # attention_rescoring
 python wenet/bin/recognize_magicmind.py \
-  --config     ./example/aishell/s0/conf/train_conformer.yaml \
-  --test_data  ./example/aishell/s0/data/test/data.list \
+  --config     ./examples/aishell/s0/conf/train_conformer.yaml \
+  --test_data  ./examples/aishell/s0/data/test/data.list \
   --dict       $dir/words.txt \
   --mode       attention_rescoring \
   --encoder_magicmind $mm_dir/encoder.magicmind  \
@@ -17,8 +17,8 @@ python wenet/bin/recognize_magicmind.py \
 
 # # ctc_prefix_beam_search 
 # python wenet/bin/recognize_magicmind.py \
-#   --config     ./asr_example/aishell/s0/conf/train_conformer.yaml \
-#   --test_data  ./asr_example/aishell/s0/data/test/data.list \
+#   --config     ./examples/aishell/s0/conf/train_conformer.yaml \
+#   --test_data  ./examples/aishell/s0/data/test/data.list \
 #   --dict       $dir/units.txt \
 #   --mode       ctc_prefix_beam_search \
 #   --encoder_magicmind $mm_dir/encoder.magicmind  \
